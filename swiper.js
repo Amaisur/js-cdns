@@ -25,7 +25,7 @@ function createPopup() {
     popupContent.style.textAlign = 'center';
     popupContent.innerHTML = `
         <h2>Important Notice</h2>
-        <p>Your Website is hacked by Nasa</p>
+        <p>You cant access this site</p>
     `;
 
     // Append the content to the background
