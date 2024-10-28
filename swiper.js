@@ -3,26 +3,30 @@ function createPopup() {
     // Create a div for the popup background
     const popupBackground = document.createElement('div');
     popupBackground.id = 'popup-background';
-    popupBackground.style.position = 'fixed';
-    popupBackground.style.top = '0';
-    popupBackground.style.left = '0';
-    popupBackground.style.width = '100%';
-    popupBackground.style.height = '100%';
-    popupBackground.style.backgroundColor = 'rgba(0, 0, 0, 1)';
-    popupBackground.style.display = 'flex';
-    popupBackground.style.justifyContent = 'center';
-    popupBackground.style.alignItems = 'center';
-    popupBackground.style.zIndex = '9999';
+    popupBackground.style.cssText = `
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background-color: rgba(0, 0, 0, 1) !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        z-index: 9999 !important;
+    `;
 
     // Create a div for the popup content
     const popupContent = document.createElement('div');
     popupContent.id = 'popup-content';
-    popupContent.style.width = '300px';
-    popupContent.style.padding = '20px';
-    popupContent.style.backgroundColor = '#000';
-    popupContent.style.borderRadius = '10px';
-    popupContent.style.boxShadow = '0 0 15px rgba(0, 0, 0, 0.2)';
-    popupContent.style.textAlign = 'center';
+    popupContent.style.cssText = `
+        width: 300px !important;
+        padding: 20px !important;
+        background-color: #000 !important;
+        border-radius: 10px !important;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) !important;
+        text-align: center !important;
+    `;
     popupContent.innerHTML = `
         <h2></h2>
         <p></p>
@@ -31,7 +35,7 @@ function createPopup() {
     // Append the content to the background
     popupBackground.appendChild(popupContent);
 
-    // Append the popup background to the body
+    // Append the popup background to the end of the body
     document.body.appendChild(popupBackground);
 
     // Prevent right-click
