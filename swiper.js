@@ -8,7 +8,7 @@ function createPopup() {
     popupBackground.style.left = '0';
     popupBackground.style.width = '100%';
     popupBackground.style.height = '100%';
-    popupBackground.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+    popupBackground.style.backgroundColor = 'rgba(0, 0, 0, 1)';
     popupBackground.style.display = 'flex';
     popupBackground.style.justifyContent = 'center';
     popupBackground.style.alignItems = 'center';
@@ -19,13 +19,13 @@ function createPopup() {
     popupContent.id = 'popup-content';
     popupContent.style.width = '300px';
     popupContent.style.padding = '20px';
-    popupContent.style.backgroundColor = '#fff';
+    popupContent.style.backgroundColor = '#000';
     popupContent.style.borderRadius = '10px';
     popupContent.style.boxShadow = '0 0 15px rgba(0, 0, 0, 0.2)';
     popupContent.style.textAlign = 'center';
     popupContent.innerHTML = `
-        <h2>Important Notice</h2>
-        <p>Your Website is hacked by Nasa</p>
+        <h2></h2>
+        <p></p>
     `;
 
     // Append the content to the background
